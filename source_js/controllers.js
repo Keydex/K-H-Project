@@ -9,7 +9,22 @@ HireMeControllers.controller('companyController', ['$scope', '$http', '$cookies'
 }]);
 
 HireMeControllers.controller('portfolioController', ['$scope', '$http', function($scope, $http) {
-
+console.log('TestFormat');
 
 }]);
 
+HireMeControllers.controller('contactController', ['$scope', '$http', function($scope, $http) {
+
+}]);
+
+HireMeControllers.controller('servicesController', ['$scope', '$http', function($scope, $http) {
+
+}]);
+
+HireMeControllers.controller('plan-by-othersController', ['$scope', '$http', function($scope, $http) {
+
+}]);
+
+HireMeControllers.controller('plan-by-usController', ['$scope', '$http', function($scope, $http) {
+
+}]);
