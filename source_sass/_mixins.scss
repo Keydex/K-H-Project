@@ -1,0 +1,15 @@
+@mixin clearfix() {
+  overflow: hidden;
+  _overflow: visible;
+}
+
+@mixin nav_transition($duration) {
+	-webkit-transition: all $duration ease;
+   transition: all $duration ease;
+}
+
+@mixin border_bottom() {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
