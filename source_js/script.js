@@ -111,3 +111,14 @@ $(document).ready(function() {
     	$('#portfolio').css('color', '#8DAF4C');
     }
 });
+
+$(document).ready(function(){
+  $('.homeimage').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
+});
+

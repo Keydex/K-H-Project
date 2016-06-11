@@ -4188,23 +4188,32 @@ hr {
   margin-bottom: 5px; }
 
 /* line 29, ../../source_sass/_base.scss */
+.homeimage {
+  margin-top: 10px; }
+
+/* line 33, ../../source_sass/_base.scss */
+.aligncenter {
+  text-align: center;
+  font-size: 12px; }
+
+/* line 38, ../../source_sass/_base.scss */
 .menu a {
   outline: none;
   color: #969696; }
 
-/* line 35, ../../source_sass/_base.scss */
+/* line 44, ../../source_sass/_base.scss */
 .menu {
   text-align: center; }
 
-/* line 40, ../../source_sass/_base.scss */
+/* line 49, ../../source_sass/_base.scss */
 .menu li {
   display: inline-block; }
 
-/* line 44, ../../source_sass/_base.scss */
+/* line 53, ../../source_sass/_base.scss */
 .menu li:hover a {
   color: #8DAF4C; }
 
-/* line 49, ../../source_sass/_base.scss */
+/* line 58, ../../source_sass/_base.scss */
 .mobile-menu {
   position: fixed;
   top: 42px;
@@ -4214,14 +4223,14 @@ hr {
   background-color: #3d3734;
   display: none; }
 
-/* line 59, ../../source_sass/_base.scss */
+/* line 68, ../../source_sass/_base.scss */
 .mobile-menu ul {
   list-style-type: none;
   left: -20px;
   position: relative;
   width: 100%; }
 
-/* line 66, ../../source_sass/_base.scss */
+/* line 75, ../../source_sass/_base.scss */
 .mobile-menu li {
   height: 40px;
   color: #fafafa;
@@ -4235,29 +4244,29 @@ hr {
   padding-bottom: 5px;
   padding-left: 20px; }
 
-/* line 78, ../../source_sass/_base.scss */
+/* line 87, ../../source_sass/_base.scss */
 .mobile-menu li:hover {
   background-color: #91847d; }
 
 @media (min-width: 640px) {
-  /* line 83, ../../source_sass/_base.scss */
+  /* line 92, ../../source_sass/_base.scss */
   .mobile-menu {
     display: none; } }
 @media (max-width: 450px) {
-  /* line 89, ../../source_sass/_base.scss */
+  /* line 98, ../../source_sass/_base.scss */
   #nav {
     display: none; } }
-/* line 93, ../../source_sass/_base.scss */
+/* line 102, ../../source_sass/_base.scss */
 .top-bar {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-/* line 96, ../../source_sass/_base.scss */
+/* line 105, ../../source_sass/_base.scss */
 #nav li {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-/* line 100, ../../source_sass/_base.scss */
+/* line 109, ../../source_sass/_base.scss */
 .partials-margin {
   margin-top: 100px; }
 
