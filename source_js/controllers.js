@@ -9,7 +9,6 @@ HireMeControllers.controller('companyController', ['$scope', '$http', '$cookies'
 }]);
 
 HireMeControllers.controller('portfolioController', ['$scope', '$http', function($scope, $http) {
-console.log('TestFormat');
 
 }]);
 
