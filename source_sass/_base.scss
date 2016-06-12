@@ -21,6 +21,24 @@
 
 }
 
+h5,h4 {
+	color: $green;
+}
+
+.adjwidth {
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.adjwidth p,.adjwidth span{
+	font-size: 90%;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
 hr {
 	margin-top: 5px;
 	margin-bottom: 5px;

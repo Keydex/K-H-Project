@@ -4183,37 +4183,55 @@ table.hover tr:nth-of-type(even):hover {
   margin-top: 10px; }
 
 /* line 24, ../../source_sass/_base.scss */
+h5, h4 {
+  color: #8DAF4C; }
+
+/* line 28, ../../source_sass/_base.scss */
+.adjwidth {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+/* line 35, ../../source_sass/_base.scss */
+.adjwidth p, .adjwidth span {
+  font-size: 90%;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+/* line 42, ../../source_sass/_base.scss */
 hr {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-/* line 29, ../../source_sass/_base.scss */
+/* line 47, ../../source_sass/_base.scss */
 .homeimage {
   margin-top: 10px; }
 
-/* line 33, ../../source_sass/_base.scss */
+/* line 51, ../../source_sass/_base.scss */
 .aligncenter {
   text-align: center;
   font-size: 12px; }
 
-/* line 38, ../../source_sass/_base.scss */
+/* line 56, ../../source_sass/_base.scss */
 .menu a {
   outline: none;
   color: #969696; }
 
-/* line 44, ../../source_sass/_base.scss */
+/* line 62, ../../source_sass/_base.scss */
 .menu {
   text-align: center; }
 
-/* line 49, ../../source_sass/_base.scss */
+/* line 67, ../../source_sass/_base.scss */
 .menu li {
   display: inline-block; }
 
-/* line 53, ../../source_sass/_base.scss */
+/* line 71, ../../source_sass/_base.scss */
 .menu li:hover a {
   color: #8DAF4C; }
 
-/* line 58, ../../source_sass/_base.scss */
+/* line 76, ../../source_sass/_base.scss */
 .mobile-menu {
   position: fixed;
   top: 42px;
@@ -4223,14 +4241,14 @@ hr {
   background-color: #3d3734;
   display: none; }
 
-/* line 68, ../../source_sass/_base.scss */
+/* line 86, ../../source_sass/_base.scss */
 .mobile-menu ul {
   list-style-type: none;
   left: -20px;
   position: relative;
   width: 100%; }
 
-/* line 75, ../../source_sass/_base.scss */
+/* line 93, ../../source_sass/_base.scss */
 .mobile-menu li {
   height: 40px;
   color: #fafafa;
@@ -4244,29 +4262,29 @@ hr {
   padding-bottom: 5px;
   padding-left: 20px; }
 
-/* line 87, ../../source_sass/_base.scss */
+/* line 105, ../../source_sass/_base.scss */
 .mobile-menu li:hover {
   background-color: #91847d; }
 
 @media (min-width: 640px) {
-  /* line 92, ../../source_sass/_base.scss */
+  /* line 110, ../../source_sass/_base.scss */
   .mobile-menu {
     display: none; } }
 @media (max-width: 450px) {
-  /* line 98, ../../source_sass/_base.scss */
+  /* line 116, ../../source_sass/_base.scss */
   #nav {
     display: none; } }
-/* line 102, ../../source_sass/_base.scss */
+/* line 120, ../../source_sass/_base.scss */
 .top-bar {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-/* line 105, ../../source_sass/_base.scss */
+/* line 123, ../../source_sass/_base.scss */
 #nav li {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-/* line 109, ../../source_sass/_base.scss */
+/* line 127, ../../source_sass/_base.scss */
 .partials-margin {
   margin-top: 100px; }
 
