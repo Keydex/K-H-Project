@@ -4201,37 +4201,41 @@ h5, h4 {
   font-weight: inherit; }
 
 /* line 42, ../../source_sass/_base.scss */
+.greentext {
+  color: #8DAF4C; }
+
+/* line 46, ../../source_sass/_base.scss */
 hr {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-/* line 47, ../../source_sass/_base.scss */
+/* line 51, ../../source_sass/_base.scss */
 .homeimage {
   margin-top: 10px; }
 
-/* line 51, ../../source_sass/_base.scss */
+/* line 55, ../../source_sass/_base.scss */
 .aligncenter {
   text-align: center;
   font-size: 12px; }
 
-/* line 56, ../../source_sass/_base.scss */
+/* line 60, ../../source_sass/_base.scss */
 .menu a {
   outline: none;
   color: #969696; }
 
-/* line 62, ../../source_sass/_base.scss */
+/* line 66, ../../source_sass/_base.scss */
 .menu {
   text-align: center; }
 
-/* line 67, ../../source_sass/_base.scss */
+/* line 71, ../../source_sass/_base.scss */
 .menu li {
   display: inline-block; }
 
-/* line 71, ../../source_sass/_base.scss */
+/* line 75, ../../source_sass/_base.scss */
 .menu li:hover a {
   color: #8DAF4C; }
 
-/* line 76, ../../source_sass/_base.scss */
+/* line 80, ../../source_sass/_base.scss */
 .mobile-menu {
   position: fixed;
   top: 42px;
@@ -4241,14 +4245,14 @@ hr {
   background-color: #3d3734;
   display: none; }
 
-/* line 86, ../../source_sass/_base.scss */
+/* line 90, ../../source_sass/_base.scss */
 .mobile-menu ul {
   list-style-type: none;
   left: -20px;
   position: relative;
   width: 100%; }
 
-/* line 93, ../../source_sass/_base.scss */
+/* line 97, ../../source_sass/_base.scss */
 .mobile-menu li {
   height: 40px;
   color: #fafafa;
@@ -4262,29 +4266,29 @@ hr {
   padding-bottom: 5px;
   padding-left: 20px; }
 
-/* line 105, ../../source_sass/_base.scss */
+/* line 109, ../../source_sass/_base.scss */
 .mobile-menu li:hover {
   background-color: #91847d; }
 
 @media (min-width: 640px) {
-  /* line 110, ../../source_sass/_base.scss */
+  /* line 114, ../../source_sass/_base.scss */
   .mobile-menu {
     display: none; } }
 @media (max-width: 450px) {
-  /* line 116, ../../source_sass/_base.scss */
+  /* line 120, ../../source_sass/_base.scss */
   #nav {
     display: none; } }
-/* line 120, ../../source_sass/_base.scss */
+/* line 124, ../../source_sass/_base.scss */
 .top-bar {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-/* line 123, ../../source_sass/_base.scss */
+/* line 127, ../../source_sass/_base.scss */
 #nav li {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
-/* line 127, ../../source_sass/_base.scss */
+/* line 131, ../../source_sass/_base.scss */
 .partials-margin {
   margin-top: 100px; }
 
