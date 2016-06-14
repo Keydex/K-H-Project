@@ -30,26 +30,25 @@ app.use(bodyParser.urlencoded({
 // middleware to use for all requests
 router.use(function(req, res, next) {
     // do logging
-    console.log('Something is happening.');
     next(); // make sure we go to the next routes and don't stop here
 });
 
 
-/ CONTACT /
+/* CONTACT */
 var contactRoute = router.route('/contact');
 
 contactRoute.post(function(req, res) {
  var contact = {};
-
+ console.log(req.body.name);
  contact.name = req.body.name;
- // contact.company = req.body.company;
- // contact.phone = req.body.phone;
- // contact.email = req.body.email;
- // contact.address = req.body.address;
+ contact.company = req.body.company;
+ contact.phone = req.body.phone;
+ contact.email = req.body.email;
+ contact.address = req.body.address;
  contact.zip = req.body.zipcode;
- // contact.hear_about_us = req.body.refer;
- // contact.contact_back = req.body.contactreq;
- // contact.questions = req.body.form;
+ contact.hear_about_us = req.body.refer;
+ contact.contact_back = req.body.contactreq;
+ contact.questions = req.body.form;
 
    // create reusable transporter object using the default SMTP transport
  var transporter = nodemailer.createTransport({
@@ -64,8 +63,8 @@ contactRoute.post(function(req, res) {
  var mailOptions = {
      from: '"Koch & Associate 👥" <associatestest@gmail.com>', // sender address
      to: 'matthewly@gmail.com, aphamx.mail@gmail.com', // list of receivers
-     subject: 'Hello, can you hear me? ✔', // Subject line
-     text: 'Im in California dreaming about who we used to be 🐴' // plaintext body
+     subject: 'Contact Us Message from'+contact.name, // Subject line
+     text: 'From: '+contact.name+' , from the company'+' '+contact.company+' '+contact.phone+' '+contact.email+' '+contact.address+' '+contact.zipcode  // plaintext body
  };
  
  // send mail with defined transport object
