@@ -7,8 +7,7 @@
 }
 
 #nav-mobile {
-	position: fixed;
-	top: 0;
+	
 	width: 100%;
 	z-index: 9999;   
 }
@@ -78,11 +77,10 @@ hr {
 
 
 .mobile-menu {
-	position: fixed;
-	top: 42px;
+	
 	width: 100%;
 	z-index: 9999;
-	height: 80px;
+	height: 240px;
 	background-color: $mobile_menu_bg_color;
 	display: none;
 }
@@ -116,6 +114,12 @@ hr {
 	}
 }
 
+@media (max-width: 639px) {
+	#nav-menu {
+		display: none;
+	}
+}
+
 @media (max-width: 450px) {
 	#nav {
 		display: none;
@@ -126,6 +130,10 @@ hr {
 }
 #nav li {
 	@include nav_transition(0.4s);
+}
+
+.title-bar {
+	background-color: $green;
 }
 
 .partials-margin {
