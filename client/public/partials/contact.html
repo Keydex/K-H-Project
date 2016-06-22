@@ -1,4 +1,107 @@
-<div ng-controller="contactController" class="adjwidth">
+
+
+<div ng-controller="contactController" layout="column" class="adjwidth" layout-padding ng-cloak>
+  
+  <h4>Contact Us</h4>
+  <p>Koch & Associates, Inc. designs and builds high quality outdoor living spaces and landscapes for relaxation and entertainment. Our staff collaborates closely with homeowners and design professionals, ensuring that every element of the installation showcases the site's natural attributes while also reflecting the client's personal aesthetics. Contact Koch & Associates Inc. to discuss your landscaping or outdoor design and construction projects.</p>
+  <br/>
+  <md-content class="md-no-momentum">
+    <form name="contactForm">
+    
+      <div layout-gt-sm="row">
+        <md-input-container class="md-icon-float md-block" flex-gt-sm>
+          <md-icon md-svg-src="img/icons/user.svg"></md-icon>
+          <label>Name</label>
+          <input ng-model="user.name" type="text">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <md-icon md-svg-src="img/icons/email.svg"></md-icon>
+          <label>Email</label>
+          <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+      </div>
+
+      <div layout-gt-sm="row">
+        <md-input-container class="md-icon-float md-block" flex-gt-sm>
+          <md-icon md-svg-src="img/icons/company.svg"></md-icon>
+          <label>Company/Organization</label>
+          <input ng-model="user.company" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block" flex-gt-sm>
+          <md-icon md-svg-src="img/icons/phone.svg"></md-icon>
+          <label>Phone</label>
+          <input ng-model="user.phone" type="text" placeholder="(555) 555-5555">
+        </md-input-container>
+      </div>
+
+      <div layout-gt-sm="row">
+        <md-input-container class="md-icon-float md-block" flex-gt-sm>
+          <md-icon md-svg-src="img/icons/home.svg"></md-icon>
+          <label>Street Address</label>
+          <input ng-model="user.st_address" type="text">
+        </md-input-container>
+      </div>
+
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>City</label>
+          <input ng-model="user.city">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>State</label>
+          <md-select ng-model="user.state">
+            <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+              {{state.abbrev}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Zip Code</label>
+          <input name="zipCode" ng-model="user.zipCode" placeholder="12345"
+                 required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+          <div ng-messages="contactForm.zipCode.$error" role="alert" multiple>
+            <div ng-message="required" class="my-message">You must supply a postal code.</div>
+            <div ng-message="pattern" class="my-message">Invalid zip code.
+            </div>
+          </div>
+        </md-input-container>
+      </div>
+
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>How did you hear about us?</label>
+          <md-select ng-model="user.refer">
+            <md-option ng-repeat="option in options" value="{{option}}">
+              {{option}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Would you like us to contact you?</label>
+          <md-select ng-model="user.contactreq">
+            <md-option ng-repeat="contactreq in contactreqs" value="{{contactreq}}">
+              {{contactreq}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      
+      <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>Questions/Comments</label>
+          <textarea ng-model="user.form" rows="5" md-select-on-focus></textarea>
+        </md-input-container>
+      </div>
+
+      <md-button class="md-raised" ng-click="update(user)">Submit</md-button>
+      
+      </form>
+    </md-content>
+</div>
+
+
+<!-- <div ng-controller="contactController" class="adjwidth">
   <h4>Contact Koch & Associates, Inc. Landscape Construction</h4>
   <p>Koch & Associates, Inc. designs and builds high quality outdoor living spaces and landscapes for relaxation and entertainment. Our staff collaborates closely with homeowners and design professionals, ensuring that every element of the installation showcases the site's natural attributes while also reflecting the client's personal aesthetics. Contact Koch & Associates Inc. to discuss your landscaping or outdoor design and construction projects.</p>
   <form novalidate class="simple-form">
@@ -15,3 +118,4 @@
 
   </form>
 </div>
+ -->

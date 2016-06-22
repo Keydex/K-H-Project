@@ -13,14 +13,21 @@ HireMeControllers.controller('portfolioController', ['$scope', '$http', function
 }]);
 
 HireMeControllers.controller('contactController', ['$scope', '$http', function($scope, $http) {
-      $scope.master = {};
-      $scope.user = {};
-      $scope.test = {'name': "somename", 'zipcode': "60101"};
+    $scope.master = {};
+    $scope.user = {};
 
- 	  $scope.arrays = ["Referral", "Google", "Yahoo", "Yelp", "Other"];    
- 	  $scope.contactreq = ["Yes", "No"];
+    $scope.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+    'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+    'WY').split(' ').map(function(state) {
+        return {abbrev: state};
+      });
 
-$scope.update = function() {
+    $scope.test = {'name': "somename", 'zipcode': "60101"};
+
+ 	  $scope.options = ["Referral", "Google", "Yahoo", "Yelp", "Other"];    
+ 	  $scope.contactreqs = ["Yes", "No"];
+
+    $scope.update = function() {
        console.log($scope.user);
        $http.post('http://localhost:4000/api/contact',$scope.user).success(function(data) {
          console.log("It came over here Matt");

@@ -1,4 +1,4 @@
-var app = angular.module('HireMe', ['ngRoute', 'HireMeControllers']);
+var app = angular.module('HireMe', ['ngRoute', 'ngMaterial', 'ngMessages', 'HireMeControllers']);
 
 app.config(function ($routeProvider, $locationProvider) {
 	$routeProvider

@@ -44,8 +44,10 @@ contactRoute.post(function(req, res) {
  contact.company = req.body.company;
  contact.phone = req.body.phone;
  contact.email = req.body.email;
- contact.address = req.body.address;
- contact.zip = req.body.zipcode;
+ contact.st_address = req.body.st_address;
+ contact.state = req.body.state;
+ contact.city = req.body.city;
+ contact.zip = req.body.zipCode;
  contact.hear_about_us = req.body.refer;
  contact.contact_back = req.body.contactreq;
  contact.questions = req.body.form;
@@ -64,7 +66,9 @@ contactRoute.post(function(req, res) {
      from: '"Koch & Associate 👥" <associatestest@gmail.com>', // sender address
      to: 'matthewly@gmail.com, aphamx.mail@gmail.com', // list of receivers
      subject: 'Contact Us Message from'+contact.name, // Subject line
-     text: 'From: '+contact.name+' , from the company'+' '+contact.company+' '+contact.phone+' '+contact.email+' '+contact.address+' '+contact.zipcode  // plaintext body
+     text: 'From: '+contact.name+' , from the company'+' '+contact.company+' '
+          +contact.phone+' '+contact.email+' '+ contact.st_address + ' ' 
+          + contact.city + ' ' + contact.state + ' ' + contact.zip 
  };
  
  // send mail with defined transport object

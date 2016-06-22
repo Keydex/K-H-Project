@@ -4300,6 +4300,18 @@ hr {
 .thumbnail {
   margin-bottom: 0; }
 
+/* line 147, ../../source_sass/_base.scss */
+.process {
+  margin-left: 100px; }
+
+/* line 151, ../../source_sass/_base.scss */
+.box {
+  margin-bottom: 20px; }
+
+/* line 155, ../../source_sass/_base.scss */
+.md-button.md-raised {
+  background-color: #8DAF4C; }
+
 /*
   NOTE: Do not touch this file. Write the bulk of your custom styles
   in _base.scss
