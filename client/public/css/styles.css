@@ -4296,6 +4296,10 @@ hr {
 .partials-margin {
   margin-top: 100px; }
 
+/* line 143, ../../source_sass/_base.scss */
+.thumbnail {
+  margin-bottom: 0; }
+
 /*
   NOTE: Do not touch this file. Write the bulk of your custom styles
   in _base.scss
