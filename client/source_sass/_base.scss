@@ -6,6 +6,10 @@
 	z-index: 9999;   
 }
 
+#nav-menu .menu li:hover a {
+	color: $green;
+}
+
 #nav-mobile {
 	
 	width: 100%;
@@ -156,6 +160,14 @@ hr {
 	background-color: $green;
 }
 
+html.md-default-theme, html, body.md-default-theme, body {
+	background-color: white;
+}
+
+
+.menu li a.active {
+    color: $green;
+}
 
 
 

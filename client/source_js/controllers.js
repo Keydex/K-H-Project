@@ -9,7 +9,76 @@ HireMeControllers.controller('companyController', ['$scope', '$http', '$cookies'
 }]);
 
 HireMeControllers.controller('portfolioController', ['$scope', '$http', function($scope, $http) {
+  $scope.filterOptions = {
+    projects: [
+      {id : 2, name : 'Show All', size: 4 },
+      {id : 3, name : 'Large', size: 3 },
+      {id : 4, name : 'Medium', size: 2 },
+      {id : 5, name : 'Small', size: 1 },
+    ]
+  };
 
+  $scope.filterItem = {
+    project: $scope.filterOptions.projects[0]
+  };
+
+  $scope.customFilter = function (data) {
+    if (data.size === $scope.filterItem.project.size) {
+      return true;
+    } else if ($scope.filterItem.project.size === 4) {
+      return true;
+    } else {
+      return false;
+    }
+  };  
+
+  $scope.data = [
+    {
+      name: "Danville Home",
+      size: 1,
+      url: "./img/portfolio/danville-thumb.jpg"
+    },
+    {
+      name: "Fremont Home 1",
+      size: 1,
+      url: "./img/portfolio/fremont-home1-thumb.jpg"
+    },
+    {
+      name: "Fremont Home 2",
+      size: 1,
+      url: "./img/portfolio/fremont-home2-thumb.jpg"
+    },
+    {
+      name: "Los Gatos Home",
+      size: 2,
+      url: "./img/portfolio/los-gatos-thumb.jpg"
+    },
+    {
+      name: "Menlo Park Home",
+      size: 2,
+      url: "./img/portfolio/menlo-park-thumb.jpg"
+    },
+    {
+      name: "Pleasanton Home",
+      size: 2,
+      url: "./img/portfolio/pleasanton-thumb.jpg"
+    },
+    {
+      name: "San Jose Home",
+      size: 3,
+      url: "./img/portfolio/san-jose-thumb.jpg"
+    },
+    {
+      name: "Saratoga Home 1",
+      size: 3,
+      url: "./img/portfolio/saratoga-home1-thumb.jpg"
+    },
+    {
+      name: "Saratoga Home 2",
+      size: 3,
+      url: "./img/portfolio/saratoga-home2-thumb.jpg"
+    },
+  ];
 }]);
 
 HireMeControllers.controller('contactController', ['$scope', '$http', function($scope, $http) {
