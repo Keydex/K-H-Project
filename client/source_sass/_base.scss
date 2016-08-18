@@ -1,31 +1,38 @@
 /* Navigation */
-#nav {
-	position: fixed;
+
+.navbar {
+	position: relative;
+	height: 100px;
 	top: 0;
-	width: 100%;
-	z-index: 9999;   
 }
 
+#nav-menu {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+}
 #nav-menu .menu li:hover a {
 	color: $green;
 }
 
 #nav-mobile {
-	
 	width: 100%;
 	z-index: 9999;   
 }
 
-#logo {
+.line {
 	display: block;
-	margin: 0 auto;
-	margin-bottom: 2px;
-	margin-top: 10px;
-
+	height: 2px;
+	width: 100%;
+	background-color: $green;
+}
+h5 {
+	color: $green;
 }
 
-h5,h4 {
-	color: $green;
+h3 {
+	text-align: center;
 }
 
 .adjwidth {
@@ -52,7 +59,9 @@ hr {
 }
 
 .homeimage {
+	margin: 0 auto;
 	margin-top: 10px;
+	width: 85%;
 }
 
 .aligncenter {
@@ -60,14 +69,22 @@ hr {
 	font-size: 12px;
 
 }
+
+#logo {
+	position: absolute;
+	left: 50px;
+	top: 15px;
+}
+
 .menu a {
 	outline: none;
-	color: $gray;
+	color: black;
+	font-weight: bold;
 }
 
 
 .menu {
-	text-align: center;
+	text-align: right;
 }
 
 
@@ -112,7 +129,7 @@ hr {
 	background-color: $mobile_menu_bg_hover;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 990px) {
 	.mobile-menu {
 		display: none;
 	}
@@ -136,9 +153,6 @@ hr {
 	@include nav_transition(0.4s);
 }
 
-.title-bar {
-	background-color: $green;
-}
 
 .partials-margin {
 	margin-top: 100px;
@@ -169,7 +183,75 @@ html.md-default-theme, html, body.md-default-theme, body {
     color: $green;
 }
 
+#project_size {
+	width: 150px;
+}
 
+.md-button.md-raised:hover:not([disabled]) {
+	background-color: #afc781;
+}
 
+.circle {
+	height: 70px;
+	width: 70px;
+	background: $green;
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	border-radius: 50px;
+	position: relative;
+}
 
+.circle i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -17px 0 0 -17px;
+}
 
+.center {
+	margin: 0 auto;
+}
+
+#water-icon i{
+	margin: -17px 0 0 -10px;
+}
+
+.desc {
+	margin-bottom: 30px;
+}
+.desc h4 {
+	text-align: center;
+}
+
+.desc ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.desc li {
+	color: $blue;
+}
+
+.directions {
+	height: 54px;
+	text-align: center;
+	line-height: 54px;
+}
+
+#or {
+	position: absolute;
+}
+
+#contact-btn-home {
+	margin-left: 28px;
+}
+
+#title {
+	margin-top: 30px;
+}
+
+.blue-btn {
+	background-color: $blue;
+}

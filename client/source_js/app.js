@@ -10,6 +10,10 @@ app.config(function ($routeProvider, $locationProvider) {
 		templateUrl : 'partials/portfolio.html',
 		controller : 'portfolioController'
 	})
+    .when('/portfolio/:location', {
+        templateUrl : 'partials/location.html',
+        controller : 'locationController'
+    })
     .when('/company', {
     	templateUrl : 'partials/company.html',
     	controller : 'companyController'

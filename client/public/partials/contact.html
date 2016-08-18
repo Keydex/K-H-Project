@@ -4,7 +4,20 @@
   <p>Koch & Associates, Inc. designs and builds high quality outdoor living spaces and landscapes for relaxation and entertainment. Our staff collaborates closely with homeowners and design professionals, ensuring that every element of the installation showcases the site's natural attributes while also reflecting the client's personal aesthetics. Contact Koch & Associates Inc. to discuss your landscaping or outdoor design and construction projects.</p>
   <br/>
 
-  <md-content class="md-no-momentum">
+  <form novalidate class="simple-form">
+    Name: <input type="text" ng-model="user.name" />
+    E-mail: <input type="email" ng-model="user.email" />
+    Company/Organization: <input type="text" ng-model="user.company"/>
+    Phone: <input type="text" ng-model="user.phone" />
+    Street Address: <input type="text" ng-model="user.address" />
+    Zipcode: <input type="text" ng-model="user.zipcode" />
+    How did you hear about us? <select ng-model="user.refer" ng-options="x for x in arrays"></select><br />
+    Would you like us to contact you?<select ng-model="user.contactreq" ng-options="x for x in contactreq"></select><br />
+    Questions/Comments: <textarea ng-model="user.form" rows="4" cols="50"></textarea><br />
+    <input type="button" class="button success" ng-click="update(user)" value="Submit"/>
+
+  </form>
+  <!-- <md-content class="md-no-momentum">
     <form name="contactForm">
     
       <div layout-gt-sm="row">
@@ -91,7 +104,7 @@
       <md-button class="md-raised" ng-click="update(user)">Submit</md-button>
       
     </form>
-  </md-content>
+  </md-content> -->
 </div>
 
 

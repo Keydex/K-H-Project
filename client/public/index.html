@@ -35,27 +35,32 @@
 
 <body ng-app="HireMe" ng-cloak>
     <!-- Navigation -->   
+    <div class="navbar">
+        <a href="#/home"><img id="logo" src="/img/koch-and-associates-logo.png"></a>
 
-    <a id="logoClick" href="#/home"><img id="logo" src="/img/koch-and-associates-logo.png"></a>
+        <div id="nav-menu">
+          <ul class="menu">
+            <li><a id="portfolio" ng-href="#/portfolio">PORTFOLIO</a></li>
+            <li><a id="company" ng-href="#/company">COMPANY</a></li>
+            <li><a id="services" ng-href="#/services">SERVICES</a></li>
+            <li><a id="plan-by-us" ng-href="#/plan-by-us">PLAN BY US</a></li>
+            <li><a id="plan-by-others" ng-href="#/plan-by-others">PLAN BY OTHERS</a></li>
+            <li><a id="contact" ng-href="#/contact">CONTACT</a></li>
+          </ul>
+        </div>
+
+        <div class="line"></div>
+    </div>
+
+    
     <hr>
     
     <div class="title-bar" id="nav-mobile" data-responsive-toggle="nav" data-hide-for="medium">
       <button class="menu-icon" id="menu-icon" type="button"></button>
       <div class="title-bar-title">Menu</div>
     </div>
-
     
     
-    <div id="nav-menu">
-      <ul class="menu">
-        <li><a id="portfolio" ng-href="#/portfolio">PORTFOLIO</a></li>
-        <li><a id="company" ng-href="#/company">COMPANY</a></li>
-        <li><a id="services" ng-href="#/services">SERVICES</a></li>
-        <li><a id="plan-by-us" ng-href="#/plan-by-us">PLAN BY US</a></li>
-        <li><a id="plan-by-others" ng-href="#/plan-by-others">PLAN BY OTHERS</a></li>
-        <li><a id="contact" ng-href="#/contact">CONTACT</a></li>
-      </ul>
-    </div>
     
     <div class="mobile-menu">
       <ul>
@@ -68,7 +73,6 @@
       </ul>
     </div>
 
-    <hr>
 
     <div ng-view> <!-- Depending on route, this div will change -->
         

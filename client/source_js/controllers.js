@@ -8,6 +8,31 @@ HireMeControllers.controller('companyController', ['$scope', '$http', '$cookies'
 	
 }]);
 
+HireMeControllers.controller('locationController', ['$scope', '$http', '$cookies', '$routeParams', function($scope, $http, $cookies, $routeParams) {
+  var location = $routeParams.location;
+  var folder = './img/portfolio/' + location;
+
+  var img_count_map = {
+    'danville': 4,
+    'fremont1': 5,
+    'fremont2': 3,
+    'losgatos': 5,
+    'menlopark': 7,
+    'pleasanton': 6,
+    'sanjose': 6,
+    'saratoga1': 6,
+    'saratoga2': 6 
+  };
+
+  var img_count = new Array(img_count_map[location]);
+
+  for (var i = 1; i <= img_count.length; i++) {
+    img_count[i-1] = i;
+  }
+
+  console.log(img_count);
+}]);
+
 HireMeControllers.controller('portfolioController', ['$scope', '$http', function($scope, $http) {
   $scope.filterOptions = {
     projects: [
