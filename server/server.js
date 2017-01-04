@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-
+var config = require('./config.js');    //Include your config skeleton file here
 // Create our Express application
 var app = express();
 
@@ -56,32 +56,33 @@ contactRoute.post(function(req, res) {
  var transporter = nodemailer.createTransport({
    service: 'Gmail',
    auth: {
-     user: 'associatestest@gmail.com',
-     pass: 'mattlyisabanana'
+     user: config.emailUser,
+     pass: config.emailPass
    }
  });
- 
+
  // setup e-mail data with unicode symbols
  var mailOptions = {
      from: '"Koch & Associate 👥" <associatestest@gmail.com>', // sender address
      to: 'matthewly@gmail.com, aphamx.mail@gmail.com', // list of receivers
      subject: 'Contact Us Message from'+contact.name, // Subject line
      text: 'From: '+contact.name+' , from the company'+' '+contact.company+' '
-          +contact.phone+' '+contact.email+' '+ contact.st_address + ' ' 
-          + contact.city + ' ' + contact.state + ' ' + contact.zip 
+          +contact.phone+' '+contact.email+' '+ contact.st_address + ' '
+          + contact.city + ' ' + contact.state + ' ' + contact.zip
  };
- 
+
  // send mail with defined transport object
  transporter.sendMail(mailOptions, function(error, info){
      if(error){
+       console('Error from sendMail');
          return console.log(error);
      }
      console.log('Message sent: ' + info.response);
  });
 
  // res.status(200).json({ message: 'Emailed!', "data":[{'name': contact.name, 'company': contact.company,
- //  'email': contact.email, 'phone': contact.phone, 'email': contact.email, 'address': contact.address, 
- //  'zip': contact.zip, 'hear_about_us': contact.hear_about_us, 'contact_back': contact.contact_back, 
+ //  'email': contact.email, 'phone': contact.phone, 'email': contact.email, 'address': contact.address,
+ //  'zip': contact.zip, 'hear_about_us': contact.hear_about_us, 'contact_back': contact.contact_back,
  //  'questions': contact.questions}] });
 
     res.status(200).json({ message: 'Emailed!'});

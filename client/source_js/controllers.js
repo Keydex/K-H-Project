@@ -5,7 +5,7 @@ HireMeControllers.controller('homeController', ['$scope','$http', '$cookies', '$
 }]);
 
 HireMeControllers.controller('companyController', ['$scope', '$http', '$cookies', function($scope, $http, $cookies) {
-	
+
 }]);
 
 HireMeControllers.controller('locationController', ['$scope', '$http', '$cookies', '$routeParams', function($scope, $http, $cookies, $routeParams) {
@@ -21,7 +21,7 @@ HireMeControllers.controller('locationController', ['$scope', '$http', '$cookies
     'pleasanton': 6,
     'sanjose': 6,
     'saratoga1': 6,
-    'saratoga2': 6 
+    'saratoga2': 6
   };
 
   var img_count = new Array(img_count_map[location]);
@@ -55,7 +55,7 @@ HireMeControllers.controller('portfolioController', ['$scope', '$http', function
     } else {
       return false;
     }
-  };  
+  };
 
   $scope.data = [
     {
@@ -118,12 +118,12 @@ HireMeControllers.controller('contactController', ['$scope', '$http', function($
 
     $scope.test = {'name': "somename", 'zipcode': "60101"};
 
- 	  $scope.options = ["Referral", "Google", "Yahoo", "Yelp", "Other"];    
+ 	  $scope.options = ["Referral", "Google", "Yahoo", "Yelp", "Other"];
  	  $scope.contactreqs = ["Yes", "No"];
 
     $scope.update = function() {
        console.log($scope.user);
-       $http.post('http://localhost:4000/api/contact',$scope.user).success(function(data) {
+       $http.post('http://192.168.29.217:4000/api/contact',$scope.user).success(function(data) {	//ToDo Change this to your server IP
          console.log("It came over here Matt");
      }).error(function (err) {
        console.log(err);

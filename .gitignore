@@ -6,3 +6,4 @@ client/node_modules/*
 client/npm-debug.log
 server/node_modules
 server/npm-debug.log
+server/config.js
